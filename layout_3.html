@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Layout 3</title>
+    <style>
+      @media screen and (max-width: 1600px) {
+        .grid {
+          grid-template-columns: auto auto auto auto;
+          grid-gap: 40px;
+        }
+        #B1 {
+          grid-area: 1/1 / span 3 / span 3;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .grid {
+          grid-template-columns: auto auto auto;
+          grid-gap: 20px;
+        }
+        #B1 {
+          grid-area: 1/1 / span 2 / span 3;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .grid {
+          grid-template-columns: auto;
+          grid-gap: 10px;
+        }
+        #B1 {
+          grid-area: 1/1 / span 2 / span 1;
+        }
+      }
+      body {
+        font-family: arial;
+        padding: 10px;
+      }
+      h1 {
+        background-color: yellow;
+        padding: 10px;
+        font-size: 40px;
+      }
+      .grid {
+        display: grid;
+        height: 75vh;
+      }
+      .grid div {
+        padding: 10px;
+        font-size: x-large;
+        color: rgb(95, 88, 88);
+      }
+      #B1 {
+        background-color: red;
+      }
+      #B2,
+      #B3,
+      #B4 {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Navigation</h1>
+    <div class="grid">
+      <div id="B1">LEFT BOX</div>
+      <div id="B2">RIGHT BOX 1</div>
+      <div id="B3">RIGHT BOX 2</div>
+      <div id="B4">RIGHT BOX 3</div>
+    </div>
+  </body>
+</html>
